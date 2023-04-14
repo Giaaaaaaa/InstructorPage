@@ -151,6 +151,11 @@ header {
   margin: 1.25rem;
 }
 
+.testimonial {
+  max-height: 1100px;
+  min-height: fit-content;
+}
+
 .testimonial h1 {
   margin: 3.125rem 0 5rem;
   padding-left: 1.25rem;
@@ -165,10 +170,78 @@ header {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
-  min-height: 40%;
+  height: 50%;
   top: 60%;
   color: #fff;
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   padding: 1.25rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #fff;
+}
+
+.contact h1 {
+  font-family: "Nanum Gothic", sans-serif;
+  margin-block: 1.25rem;
+}
+
+.contact p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.contact .contact-form {
+  padding: 3.125rem 10vw;
+  background-color: #232425;
+}
+
+.contact .contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 50px;
+}
+
+.contact .contact-form form input, .contact .contact-form form textarea {
+  background-color: transparent;
+  border: #49494a 1px solid;
+  padding-inline: 1.25rem;
+}
+
+.contact .contact-form form input:focus, .contact .contact-form form textarea:focus {
+  border: #000 1px solid;
+  outline: none;
+}
+
+.contact .contact-form form input:hover, .contact .contact-form form textarea:hover {
+  border: #fff 1px solid;
+}
+
+.contact .contact-form form input {
+  height: 50px;
+}
+
+.contact .contact-form form textarea {
+  resize: none;
+  padding-top: 5px;
+}
+
+.contact .contact-form form button {
+  width: 20%;
+  height: 50px;
+  border-radius: 5%;
+  background-color: #999;
+  border: #999 1px solid;
+  color: #fff;
+}
+
+.contact .contact-form form button:hover {
+  background-color: transparent;
 }

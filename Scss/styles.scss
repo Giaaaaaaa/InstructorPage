@@ -158,11 +158,15 @@ header {
 }
 
 .testimonial {
+    max-height: 1100px;
+    min-height: fit-content;
+
     h1 {
         margin: 3.125rem 0 5rem;
         padding-left: 1.25rem;
         border-left: #49494a 5px solid;
     }
+
 
     .testimonial-slide {
         position: relative;
@@ -171,12 +175,74 @@ header {
             position: absolute;
             background-color: rgba(0, 0, 0, 0.8);
             width: 100%;
-            min-height: 40%;
+            height: 50%;
+            // min-height: fit-content;
             top: 60%;
             color: #fff;
             font-family: $content-font;
-            font-size: 24px;
+            font-size: 20px;
             padding: 1.25rem 5rem;
+            @include flex-center();
         }
+    }
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #fff;
+    h1 {
+        font-family: $title-font;
+        margin-block: 1.25rem;
+    }
+
+    p{
+    font-family: $content-font;
+    }
+
+    .contact-form {
+        padding: 3.125rem 10vw;
+        background-color: #232425;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-top: 50px;
+
+            input, textarea {
+                background-color: transparent;
+                border: #49494a 1px solid;
+                padding-inline: 1.25rem;
+                &:focus{
+                    border:#000 1px solid;
+                    outline: none;
+                }
+                &:hover {
+                    border:#fff 1px solid;
+                }
+            }
+            input {
+                height: 50px;
+            }
+
+            textarea {
+                resize: none;
+                padding-top: 5px;
+            }
+
+            button {
+                width: 20%;
+                height: 50px;
+                border-radius: 5%;
+                background-color: #999;
+                border: #999 1px solid;
+                color: #fff;
+                &:hover {
+                background-color: transparent;   
+                }
+            }
+        }
+
     }
 }
