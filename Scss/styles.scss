@@ -20,6 +20,12 @@ $content-font: 'Open Sans', sans-serif;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+@mixin bar-title {
+    margin: 3.125rem 0 5rem;
+    padding-left: 1.25rem;
+    border-left: #49494a 5px solid;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,6 +34,7 @@ $content-font: 'Open Sans', sans-serif;
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 li {
@@ -157,14 +164,16 @@ header {
     }
 }
 
+
 .testimonial {
     max-height: 1100px;
     min-height: fit-content;
 
     h1 {
-        margin: 3.125rem 0 5rem;
-        padding-left: 1.25rem;
-        border-left: #49494a 5px solid;
+        // margin: 3.125rem 0 5rem;
+        // padding-left: 1.25rem;
+        // border-left: #49494a 5px solid;
+        @include bar-title();
     }
 
 
@@ -191,13 +200,14 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: #fff;
+
     h1 {
         font-family: $title-font;
         margin-block: 1.25rem;
     }
 
-    p{
-    font-family: $content-font;
+    p {
+        font-family: $content-font;
     }
 
     .contact-form {
@@ -210,18 +220,22 @@ header {
             gap: 1.25rem;
             margin-top: 50px;
 
-            input, textarea {
+            input,
+            textarea {
                 background-color: transparent;
                 border: #49494a 1px solid;
                 padding-inline: 1.25rem;
-                &:focus{
-                    border:#000 1px solid;
+
+                &:focus {
+                    border: #000 1px solid;
                     outline: none;
                 }
+
                 &:hover {
-                    border:#fff 1px solid;
+                    border: #fff 1px solid;
                 }
             }
+
             input {
                 height: 50px;
             }
@@ -238,11 +252,63 @@ header {
                 background-color: #999;
                 border: #999 1px solid;
                 color: #fff;
+
                 &:hover {
-                background-color: transparent;   
+                    background-color: transparent;
                 }
             }
         }
 
     }
+}
+
+footer {
+
+    .container {
+        display: flex;
+        margin-block: 3.125rem;
+        border-top: 1px solid #d2d0d0;
+
+        .content {
+            flex: 1;
+
+            h1 {
+                @include bar-title();
+                color: #1c1c1c;
+                font-family: $title-font;
+                margin-bottom: 3.125rem;
+
+                &:hover {
+                    color: #49494a;
+                }
+
+            }
+
+            h5 {
+                color: #646464;
+                font-weight: 400;
+            }
+
+
+        }
+
+        .social {
+            @include flex-center();
+
+            .social-list {
+                display: flex;
+                flex-direction: row;
+                gap: 1.875rem;
+
+                li {
+                    font-size: 2.8125rem;
+                    cursor: pointer;
+                }
+
+            }
+
+
+        }
+    }
+
 }

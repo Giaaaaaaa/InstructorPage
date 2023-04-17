@@ -7,6 +7,7 @@
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 li {
@@ -209,18 +210,21 @@ header {
   margin-top: 50px;
 }
 
-.contact .contact-form form input, .contact .contact-form form textarea {
+.contact .contact-form form input,
+.contact .contact-form form textarea {
   background-color: transparent;
   border: #49494a 1px solid;
   padding-inline: 1.25rem;
 }
 
-.contact .contact-form form input:focus, .contact .contact-form form textarea:focus {
+.contact .contact-form form input:focus,
+.contact .contact-form form textarea:focus {
   border: #000 1px solid;
   outline: none;
 }
 
-.contact .contact-form form input:hover, .contact .contact-form form textarea:hover {
+.contact .contact-form form input:hover,
+.contact .contact-form form textarea:hover {
   border: #fff 1px solid;
 }
 
@@ -244,4 +248,50 @@ header {
 
 .contact .contact-form form button:hover {
   background-color: transparent;
+}
+
+footer .container {
+  display: flex;
+  margin-block: 3.125rem;
+  border-top: 1px solid #d2d0d0;
+}
+
+footer .container .content {
+  flex: 1;
+}
+
+footer .container .content h1 {
+  margin: 3.125rem 0 5rem;
+  padding-left: 1.25rem;
+  border-left: #49494a 5px solid;
+  color: #1c1c1c;
+  font-family: "Nanum Gothic", sans-serif;
+  margin-bottom: 3.125rem;
+}
+
+footer .container .content h1:hover {
+  color: #49494a;
+}
+
+footer .container .content h5 {
+  color: #646464;
+  font-weight: 400;
+}
+
+footer .container .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container .social .social-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1.875rem;
+}
+
+footer .container .social .social-list li {
+  font-size: 2.8125rem;
+  cursor: pointer;
 }
