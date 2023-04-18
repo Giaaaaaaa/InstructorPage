@@ -21,7 +21,8 @@ $(window).scroll(function () {
         if ($(document).scrollTop() + 150 >= $(item).offset().top) {
 
             $(".nav-link").removeClass("active").eq(index).addClass("active")
-
+            
+           
         }
 
     })
