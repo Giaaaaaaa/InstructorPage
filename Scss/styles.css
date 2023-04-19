@@ -324,3 +324,22 @@ footer .container .social .social-list li {
   font-size: 2.8125rem;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+  nav {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 18px;
+  }
+  nav {
+    margin: 0;
+    min-width: 100% !important;
+  }
+}
