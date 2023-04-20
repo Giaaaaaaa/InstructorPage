@@ -21,12 +21,22 @@ $(window).scroll(function () {
         if ($(document).scrollTop() + 150 >= $(item).offset().top) {
 
             $(".nav-link").removeClass("active").eq(index).addClass("active")
-            
-           
+
+
         }
 
     })
 })
+
+if ($(window, document).width() <= 600) {
+    $(".mySwiper .swiper-slide").on("click", function () {
+        // change opacity after clicking
+        $(this).addClass("current-show").siblings().removeClass("current-show")
+       
+
+    })
+
+}
 
 
 
