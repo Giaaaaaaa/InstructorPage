@@ -1,4 +1,3 @@
-// console.log(123);
 
 // show animation when clicking the nav link
 $(".nav-link").on("click", function () {
