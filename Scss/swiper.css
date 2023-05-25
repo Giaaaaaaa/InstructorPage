@@ -34,7 +34,8 @@
 .mySwiper2 {
     width: 100%;
     min-height: 50%;
-
+    --swiper-navigation-color: #fff; 
+    --swiper-pagination-color: #fff
 }
 
 .mySwiper {
